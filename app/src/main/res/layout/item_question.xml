@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/dp_16">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_ask_info" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_topic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp_4"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/blue2"
+                tool:text="#线代#"/>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/tv_topic"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/black"
+                tool:text="线代第一题不会，求解" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:addStatesFromChildren="true">
+            <TextView
+                android:id="@+id/tv_describe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_4"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/black2"
+                android:ellipsize="end"
+                android:maxLines="2"
+                tool:text="常规题目，还请大佬帮忙解答常规题目，还请大佬帮忙解答常规题目"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/tv_describe"
+                android:layout_alignBottom="@id/tv_describe"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/blue3"
+                android:text="@string/show_image" />
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
