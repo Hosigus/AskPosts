@@ -1,5 +1,6 @@
 package com.hosigus.askposts.item.Option;
 
+import com.hosigus.askposts.App;
 import com.hosigus.askposts.item.jsonBean.BaseBean;
 import com.hosigus.tools.options.NetOption;
 
@@ -12,4 +13,9 @@ public class BaseOption extends NetOption {
         super(url);
         beanClass(BaseBean.class);
     }
+
+    public NetOption addUserParam(){
+        return this.param("stuNum", App.getMe().getStuNum()).param("idNum", App.getPwd(App.getMe().getStuNum()));
+    };
+
 }

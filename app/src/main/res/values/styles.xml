@@ -12,5 +12,7 @@
     <style name="LoginTheme" parent="AppTheme" >
         <item name="android:windowTranslucentStatus">true</item>
     </style>
-
+    <style name="OverflowMenuTheme" parent="@style/Widget.AppCompat.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item>
+    </style>
 </resources>

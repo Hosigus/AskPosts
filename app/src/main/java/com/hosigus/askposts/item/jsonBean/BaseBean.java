@@ -41,4 +41,8 @@ public class BaseBean extends JSONBean {
     public boolean isStatusOK() {
         return status == 200;
     }
+
+    public boolean isGoodJson() {
+        return isStatusOK() && data != null && !data.isEmpty();
+    }
 }

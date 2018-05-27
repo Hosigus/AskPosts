@@ -12,4 +12,21 @@
     <string name="show_image">查看图片</string>
     <string name="question_detail">求助详情</string>
     <string name="filtrate">筛选</string>
+    <string name="deafault_sort">默认排序</string>
+    <string name="come_help">快来成为第一个帮助者吧~</string>
+    <string name="accept">采纳</string>
+    <string name="unfold_more">展开更多</string>
+    <string name="accepted">已采纳</string>
+    <string name="report">举报</string>
+    <string name="share">分享</string>
+    <string name="like">点赞</string>
+    <string name="answer_detail">回答详情</string>
+    <string name="come_commend">快来强占沙发</string>
+    <string name="commend">评论</string>
+    <string name="cancel">取消</string>
+    <string name="submit">提交</string>
+    <string name="post_help">提供帮助</string>
+    <string name="hint_help">请尽可能给出明确的解决思路哦</string>
+    <string name="send">发送</string>
+    <string name="hint_commend">请输入你的评论</string>
 </resources>

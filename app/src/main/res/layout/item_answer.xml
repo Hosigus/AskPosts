@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/pure_white"
+    android:padding="@dimen/dp_16"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:tool="http://schemas.android.com/tools">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <com.hosigus.askposts.ui.view.CircleImageView
+           android:id="@+id/civ_head"
+           android:layout_width="@dimen/dp_48"
+           android:layout_height="@dimen/dp_48"
+           android:layout_marginEnd="@dimen/dp_12"
+           android:scaleType="centerCrop"
+           android:src="@drawable/ic_default_head"/>
+
+       <TextView
+           android:id="@+id/tv_name"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerVertical="true"
+           android:layout_toEndOf="@+id/civ_head"
+           android:textColor="@color/gray"
+           android:textSize="@dimen/sp_16"
+           tool:text="李吉" />
+
+       <View
+           android:id="@+id/v_sex"
+           android:layout_width="@dimen/dp_14"
+           android:layout_height="@dimen/dp_14"
+           android:layout_centerVertical="true"
+           android:layout_toEndOf="@+id/tv_name"
+           android:layout_marginStart="@dimen/dp_4"
+           android:visibility="gone"
+           tool:background="@drawable/ic_sex_boy" />
+
+       <TextView
+           android:id="@+id/btn_accept"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingTop="@dimen/dp_4"
+           android:paddingBottom="@dimen/dp_4"
+           android:paddingStart="@dimen/dp_12"
+           android:paddingEnd="@dimen/dp_12"
+           android:layout_alignParentEnd="true"
+           android:layout_centerVertical="true"
+           android:textSize="@dimen/sp_12"
+           android:textColor="@color/blue4"
+           android:background="@drawable/shape_accept"
+           android:visibility="gone"
+           android:text="@string/accept" />
+
+       <LinearLayout
+           android:id="@+id/ll_accept"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:visibility="gone"
+           android:layout_alignParentEnd="true"
+           android:layout_centerVertical="true">
+           <View
+               android:layout_width="@dimen/dp_16"
+               android:layout_height="@dimen/dp_16"
+               android:background="@drawable/ic_accept"/>
+           <TextView
+               android:id="@+id/tv_accept"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/dp_6"
+               android:textColor="@color/pure_gray"
+               android:textSize="@dimen/sp_12"
+               android:text="@string/accepted"/>
+       </LinearLayout>
+   </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:addStatesFromChildren="true">
+        <TextView
+            android:id="@+id/tv_describe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_4"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/black2"
+            android:ellipsize="end"
+            android:maxLines="3"
+            tool:text="是的，公式是没有问题，但是你第三步那个代入方式是错 误的，不应该用x的负5次方是的，公式是没有问题，但 是你第三步那个代入方式是错误的，不应该..."/>
+
+        <TextView
+            android:id="@+id/unfold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/tv_describe"
+            android:layout_alignBottom="@id/tv_describe"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/blue3"
+            android:text="@string/unfold_more" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/pure_gray"
+            android:textSize="@dimen/sp_12"
+            tool:text="2018-05-20"/>
+
+        <View
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="@dimen/dp_14"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/tv_comment"
+            android:background="@drawable/ic_comment" />
+
+        <TextView
+            android:id="@+id/tv_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_6"
+            android:layout_marginEnd="@dimen/dp_32"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/v_like"
+            android:textColor="@color/pure_gray"
+            android:textSize="@dimen/sp_12"
+            tool:text="15" />
+
+        <View
+            android:id="@+id/v_like"
+            android:layout_width="@dimen/dp_14"
+            android:layout_height="@dimen/dp_16"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/tv_like"
+            android:background="@drawable/ic_good_dark"/>
+
+        <TextView
+            android:id="@+id/tv_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_6"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/pure_gray"
+            android:textSize="@dimen/sp_12"
+            tool:text="25" />
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_2"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:background="@color/pure_white"
+        android:foreground="@color/white"/>
+</LinearLayout>

@@ -69,10 +69,12 @@ public class LoginActivity extends AppCompatActivity {
                             App.setLogin(false);
                             return;
                         }
-                        if (!App.isLogin()) {
+                        String stuNum = userET.getText().toString();
+                        String pwdStr = pwdET.getText().toString();
+                        if (!App.isLogin()||!App.getMe().getStuNum().equals(stuNum)||!App.getPwd(stuNum).equals(pwdStr)) {
                             NetUtils.post(new BaseOption(NetUrls.INFO)
-                                    .param("stuNum", userET.getText().toString())
-                                    .param("idNum", pwdET.getText().toString()), new NetCallbackImpl(){
+                                    .param("stuNum", stuNum)
+                                    .param("idNum", pwdStr), new NetCallbackImpl(){
                                 @Override
                                 public void onSuccess(JSONBean data) {
                                     ToastUtils.show("欢迎！");

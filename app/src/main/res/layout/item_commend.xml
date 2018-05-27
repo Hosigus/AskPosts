@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@color/pure_white"
+    android:padding="@dimen/dp_16"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.hosigus.askposts.ui.view.CircleImageView
+            android:id="@+id/civ_head"
+            android:layout_width="@dimen/dp_48"
+            android:layout_height="@dimen/dp_48"
+            android:layout_marginEnd="@dimen/dp_12"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_default_head"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/civ_head"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/sp_16"
+            tool:text="李吉" />
+
+        <View
+            android:id="@+id/v_sex"
+            android:layout_width="@dimen/dp_14"
+            android:layout_height="@dimen/dp_14"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/tv_name"
+            android:layout_marginStart="@dimen/dp_4"
+            android:visibility="gone"
+            tool:background="@drawable/ic_sex_boy" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/pure_gray"
+            android:textSize="@dimen/sp_12"
+            tool:text="2018-05-20" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_describe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/black2"
+        tool:text="是的，公式是没有问题，但是你第三步那个代入方式是错 误的，不应该用x的负5次方是的，公式是没有问题，但 是你第三步那个代入方式是错误的，不应该..."/>
+
+    <include layout="@layout/include_line2" />
+</LinearLayout>

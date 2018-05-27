@@ -107,7 +107,7 @@ public class QuestionTopicFragment extends Fragment {
                 public void onSuccess(JSONBean data) {
                     load.setVisibility(View.GONE);
                     BaseBean baseBean = (BaseBean) data;
-                    if (baseBean.isStatusOK() && baseBean.getData() != null && !baseBean.getData().isEmpty()) {
+                    if (baseBean.isGoodJson()) {
                         try {
                             JSONArray qArray = new JSONArray(baseBean.getData());
                             List<Question> newQList = new ArrayList<>();
@@ -149,7 +149,7 @@ public class QuestionTopicFragment extends Fragment {
         if (kind == null) {
             kind = "全部";
         }
-        page = 1;
+        page = 2;
         loadOption = new BaseOption(NetUrls.QUESTION_LIST).param("size","6").param("kind",kind);
     }
 
@@ -159,7 +159,7 @@ public class QuestionTopicFragment extends Fragment {
             public void onSuccess(JSONBean data) {
                 srl.setRefreshing(false);
                 BaseBean baseBean = (BaseBean) data;
-                if (baseBean.isStatusOK() && baseBean.getData() != null && !baseBean.getData().isEmpty()) {
+                if (baseBean.isGoodJson()) {
                     try {
                         JSONArray qArray = new JSONArray(baseBean.getData());
                         List<Question> newQList = new ArrayList<>();
@@ -167,7 +167,7 @@ public class QuestionTopicFragment extends Fragment {
                             newQList.add(new Question(qArray.getJSONObject(i)));
                         }
                         adapter.refresh(newQList);
-                        page = 1;
+                        page = 2;
                     } catch (JSONException e) {
                         e.printStackTrace();
                         ToastUtils.show("刷新失败，服务器错误");

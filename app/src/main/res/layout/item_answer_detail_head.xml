@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pure_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_16"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_16">
+                <TextView
+                    android:id="@+id/tv_topic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_4"
+                    android:textSize="@dimen/sp_14"
+                    android:textColor="@color/blue2"
+                    tool:text="#线代#"/>
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/tv_topic"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/sp_16"
+                    android:textColor="@color/black"
+                    tool:text="线代第一题不会，求解" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/include_line2" />
+
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16">
+
+                <com.hosigus.askposts.ui.view.CircleImageView
+                    android:id="@+id/civ_head"
+                    android:layout_width="@dimen/dp_32"
+                    android:layout_height="@dimen/dp_32"
+                    android:layout_marginEnd="@dimen/dp_12"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_default_head"/>
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/civ_head"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/black2"
+                    android:textSize="@dimen/sp_14"
+                    tool:text="李吉" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_name"
+                    android:layout_toEndOf="@+id/civ_head"
+                    android:textColor="@color/gray2"
+                    android:textSize="@dimen/sp_12"
+                    tool:text="2018-5-20" />
+
+                <View
+                    android:id="@+id/v_sex"
+                    android:layout_margin="@dimen/dp_2"
+                    android:layout_width="@dimen/dp_14"
+                    android:layout_height="@dimen/dp_14"
+                    android:layout_toEndOf="@+id/tv_name"
+                    android:layout_alignParentTop="true"
+                    android:visibility="gone"
+                    tool:background="@drawable/ic_sex_boy" />
+
+                <TextView
+                    android:id="@+id/btn_accept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/dp_4"
+                    android:paddingBottom="@dimen/dp_4"
+                    android:paddingStart="@dimen/dp_12"
+                    android:paddingEnd="@dimen/dp_12"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="@color/blue4"
+                    android:background="@drawable/shape_accept"
+                    android:visibility="gone"
+                    android:text="@string/accept" />
+
+                <LinearLayout
+                    android:id="@+id/ll_accept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true">
+                    <View
+                        android:layout_width="@dimen/dp_16"
+                        android:layout_height="@dimen/dp_16"
+                        android:background="@drawable/ic_accept"/>
+                    <TextView
+                        android:id="@+id/tv_accept"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_6"
+                        android:textColor="@color/pure_gray"
+                        android:textSize="@dimen/sp_12"
+                        android:text="@string/accepted"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="@dimen/dp_8"
+                android:id="@+id/tv_describe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/gray"
+                tool:text="常规题目，常规题目常规题目常规题目常规题目常规题目常规题目常规题目常规题目常规题目常规题目常规题目"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/iv_1"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="@dimen/dp_102"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"
+                        tool:visibility="visible"/>
+                    <ImageView
+                        android:id="@+id/iv_2"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="@dimen/dp_102"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"
+                        tool:visibility="visible"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/iv_3"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="@dimen/dp_102"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"
+                        tool:visibility="visible"/>
+                    <ImageView
+                        android:id="@+id/iv_4"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="@dimen/dp_102"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"
+                        tool:visibility="visible"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <View
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_16"/>
+    <RelativeLayout
+        android:background="@color/pure_white"
+        android:paddingTop="@dimen/dp_16"
+        android:paddingBottom="@dimen/dp_16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_answer_num"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/sp_14"
+            tool:text="评论0"/>
+
+    </RelativeLayout>
+    <View
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_2"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:background="@color/pure_white"
+        android:foreground="@color/white"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_no_answer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/come_commend"
+            android:textColor="@color/pure_gray" />
+    </RelativeLayout>
+
+</LinearLayout>

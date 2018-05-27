@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/shape_gradient"
+        android:fitsSystemWindows="true"
+        app:theme="@style/OverflowMenuTheme">
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            android:text="@string/cancel" />
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_24"
+            android:text="@string/post_help"/>
+        <TextView
+            android:id="@+id/btn_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            android:text="@string/submit"
+            android:layout_marginEnd="@dimen/dp_16"/>
+    </android.support.v7.widget.Toolbar>
+
+    <EditText
+        android:background="@null"
+        android:id="@+id/et_help"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="@dimen/dp_12"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_16"
+        android:gravity="start|top"
+        android:hint="@string/hint_help"
+        app:layout_constraintBottom_toTopOf="@id/guideline58"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"/>
+
+    <TextView
+        android:id="@+id/tv_size_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black2"
+        android:textSize="@dimen/sp_12"
+        android:layout_margin="@dimen/dp_8"
+        app:layout_constraintBottom_toBottomOf="@id/et_help"
+        app:layout_constraintEnd_toEndOf="@id/et_help"
+        tool:text="300" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline58"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.58"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="@+id/guideline58" />
+    <View
+        android:layout_width="@dimen/dp_108"
+        android:layout_height="@dimen/dp_108"
+        android:layout_margin="@dimen/dp_14"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/ic_add_image"
+        app:layout_constraintTop_toBottomOf="@id/line"/>
+    <!--<TableLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:padding="@dimen/dp_8"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/line">-->
+        <!--<TableRow android:layout_weight="1"-->
+            <!--android:layout_marginBottom="@dimen/dp_4">-->
+            <!--<View android:background="@drawable/ic_add_image"-->
+                <!--android:layout_span="1"/>-->
+            <!--<View android:layout_weight="1"/>-->
+            <!--<View android:background="@drawable/ic_add_image"-->
+                <!--android:layout_span="1"/>-->
+            <!--<View android:layout_weight="1"/>-->
+            <!--<View android:background="@drawable/ic_add_image"-->
+                <!--android:layout_span="1"/>-->
+        <!--</TableRow>-->
+        <!--<TableRow-->
+            <!--android:layout_marginTop="@dimen/dp_4"-->
+            <!--android:layout_weight="1">-->
+            <!--<View android:background="@drawable/ic_add_image"-->
+                <!--android:layout_span="1"/>-->
+            <!--<View-->
+                <!--android:layout_span="2"/>-->
+        <!--</TableRow>-->
+    <!--</TableLayout>-->
+</android.support.constraint.ConstraintLayout>

@@ -22,7 +22,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.activity.MainActivity" />
-        <activity android:name=".ui.activity.QuestionDetailActivity"></activity>
+        <activity android:name=".ui.activity.QuestionDetailActivity" />
+        <activity android:name=".ui.activity.AnswerDetailActivity" />
+        <activity android:name=".ui.activity.PostAnswerActivity"></activity>
     </application>
 
 </manifest>
