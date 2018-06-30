@@ -27,11 +27,18 @@
             android:text="@string/question_detail"/>
     </android.support.v7.widget.Toolbar>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_question_detail"
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl_question_detail"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_question_detail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -39,19 +46,6 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_48">
-
-        <!--<com.hosigus.askposts.ui.view.ImageTextView-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="0dp"-->
-            <!--app:image="@drawable/ic_add_coin"-->
-            <!--app:layout_constraintEnd_toStartOf="@+id/view"-->
-            <!--app:layout_constraintStart_toStartOf="parent"-->
-            <!--app:layout_constraintTop_toTopOf="parent"-->
-            <!--app:layout_constraintBottom_toBottomOf="parent"-->
-            <!--app:imageHeight="@dimen/dp_32"-->
-            <!--app:imageWidth="@dimen/dp_32"-->
-            <!--app:textSize="@dimen/sp_8"-->
-            <!--app:text="加价"/>-->
 
         <TextView
             android:id="@+id/tv_left"
